@@ -1,0 +1,30 @@
+
+
+{% extends "base.html" %}
+
+{% block script %}
+    <script src="https://cdn.jsdelivr.net/gh/jquery-form/form@4.2.2/dist/jquery.form.min.js" integrity="sha384-FzT3vTVGXqf7wRfy8k4BiyzvbNfeYjK+frTVqZeNDFl8woCbF0CYG6g2fMEFFo/i" crossorigin="anonymous"></script>
+    <script src = "/static/js/comments.js"></script>
+{% endblock %}
+
+{% block content %}
+    {% if recipes %}
+                <h1>{{recipes.title}}</h1>
+                <br>
+                <p>{{recipes.text}}</p>
+    {% endif %}
+{% endblock %}
+    {% block extra %}
+        {% if recipes.comments.count != 0 %}
+            {% for comment in recipes.comments.all %}
+                <div class = 'comment'>
+                <h5>{{ comment.creator }}:</h5>
+            <p>{{ comment.comment_text }}</p>
+                </div>
+            {% endfor %}
+        {% else %}
+            <p class = 'comment' id = "nocomment">нет комментариев</p>
+        {% endif %}
+        <div id ="rec_num" data = "{{ recipes.id }}"></div>
+        <div id ="new_comment" ></div>
+    {% endblock %}

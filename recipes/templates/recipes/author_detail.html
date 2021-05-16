@@ -1,0 +1,11 @@
+
+
+{% extends "base.html" %}
+
+{% block content %}
+    {% if recipes %}
+            {% for recipe in recipes %}
+                <h1>{{recipe.title}}</h1>
+            {% endfor %}
+    {% endif %}
+{% endblock %}

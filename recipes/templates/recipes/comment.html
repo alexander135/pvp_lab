@@ -1,0 +1,13 @@
+
+{% if comment %}
+  <div class = 'comment' id = "useless">
+        <h5>{{ comment.creator }}:</h5>
+        <p>{{ comment.comment_text }}</p>
+  </div>
+{% endif %}
+<div id = "new_comment"></div>
+<form id = "comment_form" method = "POST" class = "comment">{% csrf_token %}
+    {{ form.as_p }}
+    <input id = "add_comment" type="submit"/>
+</form>
+

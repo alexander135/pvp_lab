@@ -1,0 +1,16 @@
+
+    <ul class = "rec">
+            {% for recipe in recipes %}
+            <li> <a href = "../all_recipes/{{recipe.id}}/">{{recipe.title}}:</a>
+                <i class = "fas fa-heart" id = "like" data = "{{ recipe.id }}" ></i> <span id = "like{{ recipe.id }}" >{{recipe.likes.count}}</span> </li>
+
+            {% endfor %}
+    </ul>
+
+        {%  if recipes.has_next %}
+        <div id="cont{{recipes.next_page_number}}"></div>
+
+            <button id="js-pagination" data="{{recipes.next_page_number}}">Загрузить еще</button>
+        {%   endif %}
+
+

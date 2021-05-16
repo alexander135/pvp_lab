@@ -1,0 +1,118 @@
+.fa-heart{
+    color:red
+}
+.fa-sign-in-alt, .fa-sign-out-alt, .fa-user-plus{
+    color:white;
+}
+
+
+a{
+    color: black;
+}
+
+ .log:hover {
+    text-decoration: none;
+    color:white;
+}
+
+.log{
+    color:white;
+}
+
+body{
+    background:url(../img/picture.jpg);
+    background-size: cover;
+    font-family:"Exo+2";
+    background-color:#FAE7B5;
+    min-width:400px;
+}
+
+
+
+head {
+    background-color:#ffa800;
+}
+
+.logo {
+    font-family:'lobster';
+    color:white;
+    font-size:3vw;
+ }
+
+
+.content{
+    padding: 3vw ;
+    background-color:#FFFFE0;
+    margin-top:15vh;
+    margin-left:5vw;
+    margin-right:5vw;
+    border-radius:10px;
+    min-height: 600px;
+ }
+
+.comment{
+    margin-right: 5vw;
+    margin-left:5vw;
+    margin-top: 10px;
+    background-color: white;
+    border-radius: 10px ;
+    min-height: 50px;
+    font-style: italic;
+    padding:15px;
+}
+
+.error{
+    color:red;
+}
+
+.logout{
+    right:2vw;
+    font-size:3vh;
+ }
+
+ ul.rec{
+     font-size:4vh;
+     margin-bottom:0px;
+ }
+
+
+.test{
+    position:absolute;
+    right: 10px;
+    top:10px;
+
+}
+
+ form.log1{
+     margin-top:15vh;
+     text-align:center;
+     margin-right: vw;
+ }
+
+ h1 {
+     text-align: center;
+ }
+
+ .navbar{
+     opacity:0.9;
+ }
+
+
+ @media(max-width:600px){
+    body{
+        background:url(../img/picturemob.jpg);
+        background-size: cover;
+    }
+    .lg_screen{
+        display:none;
+    }
+}
+
+ @media(min-width:601px) {
+
+     .sm_screen {
+         display: none;
+     }
+ }
+
+
